@@ -1,0 +1,24 @@
+def word_link_game():
+words = ["apple", "elephant", "tiger", "rabbit", "tulip", "peacock"]
+used_words = []
+current_word = random.choice(words)
+used_words.append(current_word)
+
+print("Welcome to the Word Link Game!")
+print("Provide a word that starts with the last letter of the previous word.")
+print("First word:", current_word.title())
+
+while True:
+user_word = input("Your word: ").lower()
+
+if user_word in used_words:
+print("You've already used that word. Game over!")
+break
+elif user_word[0] == current_word[-1]:
+used_words.append(user_word)
+current_word = user_word
+print("Good! Next word:", user_word.title())
+else:
+print("Incorrect! The word should start with the letter", current_word[-1])
+
+word_link_game()
