@@ -1,4 +1,4 @@
-def word_link_game(12211):
+def word_link_game(122121):
 words = ["apple", "elephant", "tiger", "rabbit", "tulip", "peacock"]
 used_words = []
 current_word = random.choice(words)
